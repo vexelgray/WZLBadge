@@ -15,7 +15,7 @@
 #define kWZLBadgeDefaultMaximumBadgeNumber                     99
 
 
-static const CGFloat kWZLBadgeDefaultRedDotRadius = 4.f;
+static const CGFloat kWZLBadgeDefaultRedDotRadius = 6.f;
 
 @implementation UIView (WZLBadge)
 
@@ -224,10 +224,10 @@ static const CGFloat kWZLBadgeDefaultRedDotRadius = 4.f;
                                     forKey:kBadgeShakeAniKey];
             break;
         case WBadgeAnimTypeScale:
-            [self.badge.layer addAnimation:[CAAnimation scaleFrom:1.4
+            [self.badge.layer addAnimation:[CAAnimation scaleFrom:1.0
                                                           toScale:0.6
                                                          durTimes:1
-                                                              rep:MAXFLOAT]
+                                                              rep:4.0]
                                     forKey:kBadgeScaleAniKey];
             break;
         case WBadgeAnimTypeBounce:
